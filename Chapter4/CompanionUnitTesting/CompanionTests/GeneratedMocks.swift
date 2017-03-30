@@ -1,4 +1,4 @@
-// MARK: - Mocks generated from file: Companion/UserDefaultsMock.swift at 2016-10-20 18:09:13 +0000
+// MARK: - Mocks generated from file: Companion/UserDefaultsMock.swift at 2017-03-30 19:11:50 +0000
 
 //
 //  UserDefaults.swift
@@ -75,7 +75,7 @@ class UserDefaultsMockStub: UserDefaultsMock {
     }
 }
 
-// MARK: - Mocks generated from file: Companion/User.swift at 2016-10-20 18:09:13 +0000
+// MARK: - Mocks generated from file: Companion/User.swift at 2017-03-30 19:11:50 +0000
 
 //
 //  User.swift
