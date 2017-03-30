@@ -1,6 +1,0 @@
-framework module Pods_DateWithCuckooTests {
-  umbrella header "Pods-DateWithCuckooTests-umbrella.h"
-
-  export *
-  module * { export * }
-}
