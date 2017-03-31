@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ZFg-mV-cFG">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="vKf-Pl-YB3">
+            <objects>
+                <navigationController id="ZFg-mV-cFG" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dK6-UA-FNf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="beP-od-zv0" kind="relationship" relationship="rootViewController" id="Zuz-LY-PvL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LNg-Yr-xY8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-196" y="-55"/>
+        </scene>
+        <!--Signs-->
+        <scene sceneID="YVF-Sp-5qx">
+            <objects>
+                <tableViewController id="beP-od-zv0" customClass="SignsTableViewController" customModule="Horoscope" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="LtI-qG-NYO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="signCell" id="8HE-yx-BmJ">
+                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8HE-yx-BmJ" id="SZi-nu-6cg">
+                                    <frame key="frameInset" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gey-LD-jpy">
+                                            <frame key="frameInset" minX="32" minY="11" width="42" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="zhY-OS-eQk" kind="show" identifier="showDetail" id="L7Q-zf-xFf"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="beP-od-zv0" id="0fA-FU-q1D"/>
+                            <outlet property="delegate" destination="beP-od-zv0" id="xK6-Hp-i6j"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Signs" id="L71-bO-lOY"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tde-W2-8e5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="753" y="-55"/>
+        </scene>
+        <!--Signs Detail View Controller-->
+        <scene sceneID="tLs-ie-mxt">
+            <objects>
+                <viewController storyboardIdentifier="SignsDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zhY-OS-eQk" customClass="SignsDetailViewController" customModule="Horoscope" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zw6-zo-xTB"/>
+                        <viewControllerLayoutGuide type="bottom" id="IWV-lp-YaV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="I2N-dC-qBU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Icn-h4-bnW">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="LSc-LM-RjL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Symbol" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r0f-8q-ZTR">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="jwZ-Ua-o7J"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Month" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gn3-Kt-9Ad">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="f7Z-mB-seU">
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Horoscope" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="e0Q-zy-xrk">
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="mA6-dZ-wAM">
+                                <color key="color" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="f7Z-mB-seU" firstAttribute="top" secondItem="gn3-Kt-9Ad" secondAttribute="bottom" constant="8" symbolic="YES" id="0hf-oH-fMg"/>
+                            <constraint firstItem="Icn-h4-bnW" firstAttribute="top" secondItem="zw6-zo-xTB" secondAttribute="bottom" constant="24" id="3xD-WQ-qYH"/>
+                            <constraint firstItem="r0f-8q-ZTR" firstAttribute="top" secondItem="Icn-h4-bnW" secondAttribute="bottom" constant="8" symbolic="YES" id="4Z4-u6-v7T"/>
+                            <constraint firstItem="mA6-dZ-wAM" firstAttribute="centerY" secondItem="I2N-dC-qBU" secondAttribute="centerY" id="B4B-o1-jJi"/>
+                            <constraint firstItem="Icn-h4-bnW" firstAttribute="trailing" secondItem="r0f-8q-ZTR" secondAttribute="trailing" id="FYz-vz-BYK"/>
+                            <constraint firstItem="Icn-h4-bnW" firstAttribute="leading" secondItem="I2N-dC-qBU" secondAttribute="leadingMargin" id="Joc-wQ-LdA"/>
+                            <constraint firstItem="gn3-Kt-9Ad" firstAttribute="trailing" secondItem="I2N-dC-qBU" secondAttribute="trailingMargin" id="LAG-9T-Ycp"/>
+                            <constraint firstItem="r0f-8q-ZTR" firstAttribute="leading" secondItem="gn3-Kt-9Ad" secondAttribute="leading" id="NrW-Q4-ODL"/>
+                            <constraint firstItem="gn3-Kt-9Ad" firstAttribute="top" secondItem="r0f-8q-ZTR" secondAttribute="bottom" constant="15" id="PHK-Zg-daz"/>
+                            <constraint firstItem="Icn-h4-bnW" firstAttribute="leading" secondItem="r0f-8q-ZTR" secondAttribute="leading" id="TIf-kT-AhZ"/>
+                            <constraint firstItem="gn3-Kt-9Ad" firstAttribute="trailing" secondItem="f7Z-mB-seU" secondAttribute="trailing" id="Uro-QG-GhY"/>
+                            <constraint firstItem="f7Z-mB-seU" firstAttribute="trailing" secondItem="e0Q-zy-xrk" secondAttribute="trailing" id="Vi4-xJ-9Jz"/>
+                            <constraint firstItem="e0Q-zy-xrk" firstAttribute="top" secondItem="f7Z-mB-seU" secondAttribute="bottom" constant="10" id="dTQ-eL-ImL"/>
+                            <constraint firstItem="gn3-Kt-9Ad" firstAttribute="leading" secondItem="f7Z-mB-seU" secondAttribute="leading" id="klj-CS-IuX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Icn-h4-bnW" secondAttribute="trailing" constant="25" id="lgX-aY-a1q"/>
+                            <constraint firstItem="f7Z-mB-seU" firstAttribute="leading" secondItem="e0Q-zy-xrk" secondAttribute="leading" id="vMg-zx-2y1"/>
+                            <constraint firstItem="e0Q-zy-xrk" firstAttribute="centerX" secondItem="mA6-dZ-wAM" secondAttribute="centerX" id="vSl-Uf-Eff"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="signDescription" destination="f7Z-mB-seU" id="vsf-2Y-dVx"/>
+                        <outlet property="signHoroscope" destination="e0Q-zy-xrk" id="QkS-yh-pg8"/>
+                        <outlet property="signMonth" destination="gn3-Kt-9Ad" id="ImS-n4-u6O"/>
+                        <outlet property="signName" destination="Icn-h4-bnW" id="LkR-1b-28H"/>
+                        <outlet property="signSymbol" destination="r0f-8q-ZTR" id="bAg-ME-lkh"/>
+                        <outlet property="spinner" destination="mA6-dZ-wAM" id="lCV-xK-zqa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y2w-HH-jfC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1644" y="-54.422788605697157"/>
+        </scene>
+    </scenes>
+</document>
