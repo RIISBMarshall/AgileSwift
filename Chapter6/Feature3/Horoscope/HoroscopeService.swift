@@ -10,7 +10,6 @@ import Foundation
 
 class HoroscopeService
 {
-    static var horoscopeUrl:String = ""
 
     class var sharedInstance :HoroscopeService
     {
